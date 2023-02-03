@@ -9,9 +9,7 @@
 
 ## Architecture
 
-> Architecture diagram goes here. Use the following format:
-
-![Diagram of the <solution name> architecture.](./images/<file-name>.png)
+![Secure ML Architecture for Finance Institutions](../media/fsi-secure-ml-architecture.png)
 
 > Under the architecture diagram, include this sentence and a link to the Visio file or the PowerPoint file: 
 
