@@ -19,14 +19,26 @@
 
 ### Dataflow
 
-> An alternate title for this sub-section is "Workflow" (if data isn't really involved).
-> In this section, include a numbered list that annotates/describes the dataflow or workflow through the solution. Explain what each step does. Start from the user or external data source, and then follow the flow through the rest of the solution (as shown in the diagram).
+1. Users connect to the Data Science & Machine Learning environment through a VPN Connection or an ExpressRoute link. 
 
-Examples:
-1. Admin 1 adds, updates, or deletes an entry in Admin 1's fork of the Microsoft 365 config file.
-2. Admin 1 commits and syncs the changes to Admin 1's forked repository.
-3. Admin 1 creates a pull request (PR) to merge the changes to the main repository.
-4. The build pipeline runs on the PR.
+2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models (alternativelly, they can choose to work on Databricks Workspaces as well).
+
+3. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow this traffic properly. Please check this [doc](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli) for more details about that.
+
+4. All the environment works in a secure and private context, all the resources (Azure ML Workspace, Storage Account, AKV and ACR) using private endpoints allocated in a customer VNet.
+
+5. This VNet can have peering with other VNets as well. For example, it is important to secure connect to a Data Lake storage to be able to use the data from different layers: bronze, silver and gold, in the ML models being developed.
+
+6. Once the Data Scientists concluded their experiments in the Compute Intances they can move forward to implement the pipelines using more robust computation (Compute Clusters).
+
+7. They can also deploy the models for Batch or Real-Time consumption thought Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other resources.
+
+
+8. A secure Databricks environment can also be used along with the other services in order to provide more capabilities about Data processing using Spark engine.
+
+
+
+
 
 ### Components
 
