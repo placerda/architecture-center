@@ -21,24 +21,19 @@
 
 1. Users connect to the Data Science & Machine Learning environment through a VPN Connection or an ExpressRoute link. 
 
-2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models (alternativelly, they can choose to work on Databricks Workspaces as well).
+2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models (alternatively, they can choose to work on Databricks Workspaces as well).
 
-3. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow this traffic properly. Please check this [doc](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli) for more details about that.
+3. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
 
-4. All the environment works in a secure and private context, all the resources (Azure ML Workspace, Storage Account, AKV and ACR) using private endpoints allocated in a customer VNet.
+4. All resources (Azure ML Workspace, Storage Account, AKV, and ACR) use private endpoints allocated in a customer VNet to ensure the private traffic.
 
-5. This VNet can have peering with other VNets as well. For example, it is important to secure connect to a Data Lake storage to be able to use the data from different layers: bronze, silver and gold, in the ML models being developed.
+5. The customer VNet for Azure ML can communicate with other VNets as well through peering. For example, it is important to securely connect to a Data Lake storage to be able to use the data from different layers: bronze, silver, and gold, in developed ML models.
 
-6. Once the Data Scientists concluded their experiments in the Compute Intances they can move forward to implement the pipelines using more robust computation (Compute Clusters).
+6. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
-7. They can also deploy the models for Batch or Real-Time consumption thought Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other resources.
+7. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources.
 
-
-8. A secure Databricks environment can also be used along with the other services in order to provide more capabilities about Data processing using Spark engine.
-
-
-
-
+8. A secure Databricks environment can also be used along with the other services in order to provide more capabilities for Data processing using the Spark engine.
 
 ### Components
 
