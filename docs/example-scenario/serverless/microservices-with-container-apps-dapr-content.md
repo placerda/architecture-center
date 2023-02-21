@@ -4,7 +4,7 @@ This article describes a solution for running an order management system with 10
 
 ## Architecture
 
-:::image type="content" source="./media/microservices-with-container-apps-dapr.png" alt-text="Diagram that shows an order management system with microservices on Container Apps." lightbox="./media/microservices-with-container-apps-dapr.png":::
+:::image type="content" source="./media/microservices-with-container-apps-dapr.svg" alt-text="Diagram that shows an order management system with microservices on Container Apps." lightbox="./media/microservices-with-container-apps-dapr.svg":::
 
 *Download a [PowerPoint file](https://arch-center.azureedge.net/microservices-with-container-apps-dapr.pptx) of this architecture.*
 
@@ -137,6 +137,8 @@ When the virtual customer isn't running, all microservices in this solution scal
 ## Deploy this scenario
 
 For deployment instructions, see the [Red Dog Demo: Azure Container Apps Deployment](https://github.com/Azure/reddog-containerapps/blob/main/README.md) on GitHub.
+
+The [Red Dog Demo: Microservices integration](https://github.com/Azure-Samples/app-templates-microservices-integration) is a packaged [app template](https://github.com/microsoft/App-Templates) that builds on the preceding code assets to demonstrate the integration of Azure Container Apps, App Service, Functions, and API Management and provisions the infra, deploys the code using GitHub Actions.
 
 ## Contributors
 
