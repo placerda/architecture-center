@@ -1,39 +1,35 @@
-> The H1 title is a noun phrase with a present tense verb that describes the scenario (no gerunds, "-ing" verbs). Don't enter it here, but as the **name** value in the corresponding YML file.> 
-> Include the solution idea header note at the top of the solution idea. This adds clarification why this is a scaled-back architecture (and provides consistency with our other SIs)...
 
 [!INCLUDE [header_file](../../../includes/sol-idea-header.md)]
 
-> Introductory section - no heading
->> In this section, include 1-2 sentences to briefly explain this architecture. 
->> The full scenario info will go in the "Scenario details" section, which is below the "Architecture" H2 (top level) heading, below the "Components" H3 header, and above the "Contributors" H2 (top level) header. That includes the "Potential use cases" H3 section, which goes under the "Scenario details" H2 section. The reason why we moved this content down lower, is because customers want the emphasis on the diagram and architecture first, not the scenario.
+This solution outlines a secure machine learning architecture aimed at Banks and other Financial Institutions. It is designed to help you take your machine-learning workloads to the cloud in an agile and secure fashion. AzureML and Azure Databricks form the core of the solution. This platform works seamlessly with other services, such as Azure Data Lake Storage Gen2, Azure Data Factory, Azure Synapse Analytics, and Power BI.
 
 ## Architecture
 
 ![Secure ML Architecture for Finance Institutions](../media/fsi-secure-ml-architecture.png)
 
-> Under the architecture diagram, include this sentence and a link to the Visio file or the PowerPoint file: 
+*Download a [Visio file](https://arch-center.azureedge.net/fsi-vteam-secure-data-science.vsdx) of this architecture.*
 
-*Download a [Visio file](https://arch-center.azureedge.net/[file-name].vsdx) of this architecture.*
-
-> Note that Visio or PowerPoint files are not allowed in the GitHub repo. Send the file or provide a link so the file can be uploaded to our limited-access CDN server.
+<!-- LINK to Visio File: https://microsoft.sharepoint.com/:u:/t/AIFSIAmericas/EbvEs9xDW-lAnpO3P_xIYIsB_hGA9YUiUXCvRRYm9dMM6A?e=6JSguy -->
 
 ### Dataflow
 
-1. Users connect to the Data Science & Machine Learning environment through a VPN Connection or an ExpressRoute link. 
+1. Users connect to the Data Science & Machine Learning environment through a VPN Connection or an ExpressRoute link. This is a secure connection that allows the users to access the Azure resources.
 
 2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models (alternatively, they can choose to work on Databricks Workspaces as well).
 
-3. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
+3. To enable outbound internet access from your private computing resources, you can use a hub VNet that houses your firewall. The hub VNet can be peered with the VNet that houses your Azure Machine Learning workspace. This allows the Azure Machine Learning workspace to communicate with the firewall. The firewall can then be configured to allow outbound internet access from the Azure Machine Learning workspace.
 
-4. All resources (Azure ML Workspace, Storage Account, AKV, and ACR) use private endpoints allocated in a customer VNet to ensure the private traffic.
+4. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
 
-5. The customer VNet for Azure ML can communicate with other VNets as well through peering. For example, it is important to securely connect to a Data Lake storage to be able to use the data from different layers: bronze, silver, and gold, in developed ML models.
+5. All resources (Azure ML Workspace, Storage Account, AKV, and ACR) use private endpoints allocated in a customer VNet to ensure the private traffic.
 
-6. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters).
+6. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
 
-7. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources.
+7. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters). 
 
-8. A secure Databricks environment can also be used along with the other services in order to provide more capabilities for Data processing using the Spark engine.
+8. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources.
+
+9. A secure Databricks environment can also be used along with the other services to provide more data processing capabilities using the Spark engine. You can also leverage this integration to monitor Azure Databricks runs, register models, and deploy them in Azure Machine Learning.
 
 ### Components
 
@@ -57,9 +53,9 @@ Example:
 
 ### Potential use cases
 
-> What industry is the customer in? Use the following industry keywords, when possible, to get the article into the proper search and filter results: retail, finance, manufacturing, healthcare, government, energy, telecommunications, education, automotive, nonprofit, game, media (media and entertainment), travel (includes hospitality, like restaurants), facilities (includes real estate), aircraft (includes aerospace and satellites), agriculture, and sports. 
->> Are there any other use cases or industries where this would be a fit?
->> How similar or different are they to what's in this article?
+This solution is aimed at financial services companies such as banks, insurers, and capital market companies that want to gain agility and efficiency by bringing their data science workloads to the cloud, but with particular attention to the solution's security.
+ 
+In addition to companies in the FSI segment, other businesses interested in creating a secure data science environment in the cloud can also benefit from this solution.
 
 ## Contributors
 
