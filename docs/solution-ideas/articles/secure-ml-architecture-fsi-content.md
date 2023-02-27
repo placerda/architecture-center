@@ -21,11 +21,11 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 4. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
 
-5. All resources (Azure ML Workspace, Storage Account, AKV, and ACR) use private endpoints allocated in a customer VNet to ensure the private traffic.
+5. All resources (Azure ML Workspace, Storage Account, Azure Key Vault, and Azure Container Registry) use private endpoints allocated in a customer VNet to ensure the private traffic.
 
 6. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
 
-7. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters). 
+7. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
 8. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources.
 
@@ -33,14 +33,25 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 ### Components
 
-> A bullet list of components in the architecture (including all relevant Azure services) with links to the product service pages. This is for lead generation (what business, marketing, and PG want). It helps drive revenue.
+* [Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/overview-what-is-azure-machine-learning) is used to develop and deploy machine learning models quickly and easily, reducing project costs by providing a cloud-based environment for MLOps with a central model registry. It also provides a secure environment for data scientists to work on their projects.
 
-> Why is each component there?
-> What does it do and why was it necessary?
-> Link the name of the service (via embedded link) to the service's product service page. Be sure to exclude the localization part of the URL (such as "en-US/").
+* [Azure Databricks](https://learn.microsoft.com/azure/databricks/introduction/) is an Apache Spark-based analytics platform optimized for Azure, providing workspaces for data engineering and science tasks. You can attach Azure Databricks to your solution to enhance data transformation and preparation. You can also use [MLflow](https://www.mlflow.org/) for tracking experiments and registering Databricks models on AzureML model registry. A Databricks cluster with secure cluster connectivity enabled have no public IP addresses on its nodes.
 
-Example: 
-* [Resource Groups][resource-groups] is a logical container for Azure resources.  We use resource groups to organize everything related to this project in the Azure console.
+* [Azure Storage Account](https://learn.microsoft.com/azure/storage/common/storage-account-overview) is a secure, highly available, and massively scalable way to store data objects, including Data Lake Storage used to store your training datasets. It provides a unique namespace for your data accessible from anywhere in the world over HTTP or HTTPS. The data stored in the storage account is durable and protected, allowing you to access it with ease.
+
+* [Azure Data Lake Storage Gen2](https://learn.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) is a set of features designed to support big data analytics, built on Azure Blob Storage. It offers file system semantics, file-level security, and scalability, as well as low-cost, tiered storage, high availability and disaster recovery capabilities.
+
+* [Azure Private Endpoints](https://learn.microsoft.com/azure/private-link/private-endpoint-overview) are secure network interfaces that use private IP addresses from virtual networks to connect to services powered by Azure Private Link. This allows services like AzureML, Azure Key Vault and Azure Container Registry to be brought into the virtual network with increased security.
+
+* [Azure VPN Gateway](https://learn.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) is a service that uses a virtual network gateway to send encrypted traffic between an Azure virtual network and on-premise locations over the public Internet, as well as between Azure virtual networks over the Microsoft network.
+
+* [Azure Express Route](https://learn.microsoft.com/azure/expressroute/expressroute-introduction) is a service that provides private connectivity between Azure and on-premises locations over a dedicated private connection facilitated by a connectivity provider, allowing you to securely extend your on-premises network to Azure.
+
+* [Azure Firewall](https://learn.microsoft.com/azure/firewall/overview) is a managed, cloud-based network security service that protects your Azure Virtual Network resources. It provides stateful packet filtering to protect your Azure virtual network resources from common network threats.
+
+* [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/basic-concepts) is used by Azure Machine Learning utilizes to secure credentials such as the storage account connection string, passwords to Azure Container Repository instances, and connection strings to data stores.
+
+* [Azure Container Registry](https://learn.microsoft.com/azure/container-registry/container-registry-intro) is used by Azure Machine Learning to securely and scalably store and manage Docker container images for model deployment into production. Additionally, users can use their Azure Container Registry to store custom code, packages, and other resources needed for model building, deployment, and management.
 
 ## Scenario details
 
@@ -59,23 +70,11 @@ In addition to companies in the FSI segment, other businesses interested in crea
 
 ## Contributors
 
-> (Expected, but this section is optional if all the contributors would prefer to not include it)
-
-> Start with the explanation text (same for every section), in italics. This makes it clear that Microsoft takes responsibility for the article (not the one contributor). Then include the "Pricipal authors" list and the "Other contributors" list, if there are additional contributors (all in plain text, not italics or bold). Link each contributor's name to the person's LinkedIn profile. After the name, place a pipe symbol ("|") with spaces, and then enter the person's title. We don't include the person's company, MVP status, or links to additional profiles (to minimize edits/updates). Implement this format:
-
 *This article is maintained by Microsoft. It was originally written by the following contributors.*
 
-Principal authors: > Only the primary authors. Listed alphabetically by last name. Use this format: Fname Lname. If the article gets rewritten, keep the original authors and add in the new one(s).
-
- - [Author 1 Name](http://linkedin.com/ProfileURL) | Title, such as "Cloud Solution Architect"
- - [Author 2 Name](http://linkedin.com/ProfileURL) | Title, such as "Cloud Solution Architect"
- - > Continue for each primary author (even if there are 10 of them).
-
-Other contributors: > (If applicable.) Include contributing (but not primary) authors, major editors (not minor edits), and technical reviewers. Listed alphabetically by last name. Use this format: Fname Lname. It's okay to add in newer contributors.
-
- - [Contributor 1 Name](http://linkedin.com/ProfileURL) | Title, such as "Cloud Solution Architect"
- - [Contributor 2 Name](http://linkedin.com/ProfileURL) | Title, such as "Cloud Solution Architect"
- - > Continue for each additional contributor (even if there are 10 of them).
+ - [Asmita Usturge](https://www.linkedin.com/in/asmitausturge/) | Cloud Solution Architect
+ - [Luiz Braz](https://www.linkedin.com/in/lfbraz/) | Cloud Solution Architect
+ - [Paulo Lacerda](https://www.linkedin.com/in/paulolacerda/) | Cloud Solution Architect
 
 *To see non-public LinkedIn profiles, sign in to LinkedIn.*
 
