@@ -35,7 +35,7 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 * [Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/overview-what-is-azure-machine-learning) is used to develop and deploy machine learning models quickly and easily, reducing project costs by providing a cloud-based environment for MLOps with a central model registry. It also provides a secure environment for data scientists to work on their projects.
 
-* [Azure Databricks](https://learn.microsoft.com/azure/databricks/introduction/) is an Apache Spark-based analytics platform optimized for Azure, providing workspaces for data engineering and science tasks. You can attach Azure Databricks to your solution to enhance data transformation and preparation. Databricks experiments and models can be tracked and registered on AzureML with [MLflow](https://www.mlflow.org/). A Databricks cluster with secure cluster connectivity enabled has no public IP addresses on its nodes.
+* [Azure Databricks](https://learn.microsoft.com/azure/databricks/introduction/) is an Apache Spark-based analytics platform optimized for Azure, providing workspaces for data engineering and science tasks. You can attach Azure Databricks to your solution to enhance data transformation and preparation. You can also use [MLflow](https://www.mlflow.org/) for tracking experiments and registering Databricks models on AzureML model registry. A Databricks cluster with secure cluster connectivity enabled have no public IP addresses on its nodes.
 
 * [Azure Storage Account](https://learn.microsoft.com/azure/storage/common/storage-account-overview) is a secure, highly available, and massively scalable way to store data objects, including Data Lake Storage used to store your training datasets. It provides a unique namespace for your data accessible from anywhere in the world over HTTP or HTTPS. The data stored in the storage account is durable and protected, allowing you to access it with ease.
 
@@ -61,6 +61,14 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 >> What does this example scenario show? What are the customer's goals?
 
 > What were the benefits of implementing the solution?
+This solution built to solve secure ML network designes for banks and FSI. This architecture design can be used for following scenarios
+
+*.[Private endpoints].(https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) A private endpoint is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by Azure Private Link. By enabling a private endpoint, you're bringing the service into your virtual network.
+
+*.[Network security and isolation].(https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#network-security-and-isolation) To restrict network access to Azure Machine Learning resources, you can use Azure Virtual Network (VNet). VNets allow you to create network environments that are partially, or fully, isolated from the public internet. This reduces the attack surface for your solution, as well as the chances of data exfiltration.
+
+*.[Data exfiltration prevention].(https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#data-exfiltration-prevention-preview) Azure Machine Learning has several inbound and outbound network dependencies. Some of these dependencies can expose a data exfiltration risk by malicious agents within your organization
+
 
 ### Potential use cases
 
