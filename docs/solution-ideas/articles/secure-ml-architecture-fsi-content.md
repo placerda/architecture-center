@@ -25,9 +25,9 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 6. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
 
-7. Once the Data Scientists concluded their experiments in the Compute instances they can move forward with implementing the pipelines using more robust computation (Compute Clusters).
+7. Once the Data Scientists have concluded their experiments in the Compute instances they could move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
-8. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources.
+8. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. Databricks users can also use the same approach deployment models to Managed Endpoint on Azure ML connecting these two environments. More details about this approach can be found on this [repo](https://github.com/Azure-Samples/aml-adb-managed-endpoints).
 
 9. A secure Databricks environment can also be used along with the other services to provide more data processing capabilities using the Spark engine. You can also leverage this integration to monitor Azure Databricks runs, register models, and deploy them in Azure Machine Learning.
 
@@ -102,3 +102,11 @@ Related architecture guides:
 Fully deployable architectures:
 
 * [Deploy models from Azure Databricks to Azure ML in a secure way](https://github.com/Azure-Samples/aml-adb-managed-endpoints)
+
+Secure MLOps solutions:
+
+* [Secure MLOps solutions with Azure network security](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/ai/network-security-mlops)
+
+ML Enterprise Governance:
+
+* [Enterprise security and governance for Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security)
