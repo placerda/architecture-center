@@ -55,19 +55,20 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 ## Scenario details
 
-> This should be an explanation of the business problem and why this scenario was built to solve it.
+<!-- 
+This should be an explanation of the business problem and why this scenario was built to solve it.
 >> What prompted them to solve the problem?
 >> What services were used in building out this solution?
 >> What does this example scenario show? What are the customer's goals?
 
 > What were the benefits of implementing the solution?
-This solution built to solve secure ML network designes for banks and FSI. This architecture design can be used for following scenarios
+This solution built to solve secure ML network designes for banks and FSI. This architecture design can be used for following scenarios -->
 
-*.[Private endpoints].(https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) A private endpoint is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by Azure Private Link. By enabling a private endpoint, you're bringing the service into your virtual network.
+* [Private endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) A private endpoint is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by Azure Private Link. By enabling a private endpoint, you're bringing the service into your virtual network.
 
-*.[Network security and isolation].(https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#network-security-and-isolation) To restrict network access to Azure Machine Learning resources, you can use Azure Virtual Network (VNet). VNets allow you to create network environments that are partially, or fully, isolated from the public internet. This reduces the attack surface for your solution, as well as the chances of data exfiltration.
+* [Network security and isolation](https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#network-security-and-isolation) To restrict network access to Azure Machine Learning resources, you can use Azure Virtual Network (VNet). VNets allow you to create network environments that are partially, or fully, isolated from the public internet. This reduces the attack surface for your solution, as well as the chances of data exfiltration.
 
-*.[Data exfiltration prevention].(https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#data-exfiltration-prevention-preview) Azure Machine Learning has several inbound and outbound network dependencies. Some of these dependencies can expose a data exfiltration risk by malicious agents within your organization
+* [Data exfiltration prevention](https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security#data-exfiltration-prevention-preview) Azure Machine Learning has several inbound and outbound network dependencies. Some of these dependencies can expose a data exfiltration risk by malicious agents within your organization
 
 
 ### Potential use cases
@@ -88,27 +89,16 @@ In addition to companies in the FSI segment, other businesses interested in crea
 
 ## Next steps
 
-> Links to articles on Microsoft Learn. Could also be to appropriate sources outside of Learn, such as third-party documentation, GitHub repos, or an official technical blog post.
+<!-- Links to articles on Microsoft Learn. Could also be to appropriate sources outside of Learn, such as third-party documentation, GitHub repos, or an official technical blog post. -->
 
-Examples:
-* [Azure Kubernetes Service (AKS) documentation](/azure/aks)
-* [Azure Machine Learning documentation](/azure/machine-learning)
-* [What are Azure Cognitive Services?](/azure/cognitive-services/what-are-cognitive-services)
+* [Enterprise security and governance for Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-enterprise-security)
 
 ## Related resources
 
-> Use "Related resources" for architecture information that's relevant to the current article. It must be content that the Azure Architecture Center TOC refers to, but may be from a repo other than the AAC repo.
-> Links to articles in the AAC repo should be repo-relative, for example (../../solution-ideas/articles/article-name.yml).
-
-> Here are example sections:
-
 Related architecture guides:
 
-* [Artificial intelligence (AI) - Architectural overview](/azure/architecture/data-guide/big-data/ai-overview)
-* [Choosing a Microsoft cognitive services technology](/azure/architecture/data-guide/technology-choices/cognitive-services)
+* [Machine learning operations (MLOps) v2](/azure/architecture/data-guide/technology-choices/machine-learning-operations-v2)
 
 Fully deployable architectures:
 
-* [Chatbot for hotel reservations](/azure/architecture/example-scenario/ai/commerce-chatbot)
-* [Build an enterprise-grade conversational bot](/azure/architecture/reference-architectures/ai/conversational-bot)
-* [Speech-to-text conversion](/azure/architecture/reference-architectures/ai/speech-ai-ingestion)
+* [Deploy models from Azure Databricks to Azure ML in a secure way](https://github.com/Azure-Samples/aml-adb-managed-endpoints)
