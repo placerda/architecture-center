@@ -1,23 +1,24 @@
 ### YamlMime:Architecture
 metadata:
-  title: <Article title, which becomes the title metadata>
+  title: Secure Machine Learning Architecture for Financial Institutions
   titleSuffix: Azure Architecture Center
-  description: <Write a 100-160 character description that ends with a period and starts with a call to action. This becomes the browse card description.>
-  author: <Contributor's GitHub username. If no GitHub account, use martinekuan>
-  ms.author: <Contributor's Microsoft alias. Can include multiple contributors, separated by commas. If there's no alias, use the Microsoft email alias "architectures".>
+  description: Bring your machine-learning workloads to the cloud securely and efficiently with this machine learning solution architecture for Banks and Financial Institutions. Get started now!
+  author: placerda
+  ms.author: asusturg, lubraz, paulolacerda
   ms.date: <Publish or major update date - mm/dd/yyyy>
   ms.topic: conceptual
   ms.service: architecture-center
   ms.subservice: solution-idea
 azureCategories:
-  - <Choose at least one category from the list at https://review.learn.microsoft.com/help/contribute/architecture-center/aac-browser-authoring#azure-categories>
-  - <There can be more than one category>
+  - ai-machine-learning
 products:
-  - <Choose 1-5 products from the list at https://review.learn.microsoft.com/help/contribute/architecture-center/aac-browser-authoring#products>
-  - <Don't use "azure" unless there is nothing else>
-  - <1-5 products--no more than 5!>
-name: <The H1 title is a phrase with a present tense verb that describes the scenario (no gerunds, "-ing" verbs). Example: "Use Azure monitoring to integrate security components">
-summary: <Write a summary. Can be same as description.>
+ - azure-machine-learning
+ - azure-databricks
+ - azure-private-link
+ - azure-data-lake-gen2
+ - azure-firewall
+name: Secure Machine Learning Architecture for Financial Institutions
+summary: This article presents a machine learning solution architecture aimed at Banks and other Financial Institutions, meeting the security and performance requirements typical of these institutions. The proposed architecture is a reference to help new customers securely bring their machine-learning workloads to the cloud agilely and based on best practices.
 thumbnailUrl: /azure/architecture/browse/thumbs/<browse-png-filename>.png
 content: |
-  [!include[](<solution-idea>-content.md)]
+  [!include[](secure-ml-architecture-fsi-content.md)]
