@@ -15,19 +15,19 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 1. Users connect to the Data Science & Machine Learning environment through a VPN Connection or an ExpressRoute link. This is a secure connection that allows the users to access the Azure resources.
 
-2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models (alternatively, they can choose to work on Databricks Workspaces as well).
+2. They work in Compute Instances created within a secure Azure ML Workspace to train Machine Learning models.
 
-3. To enable outbound internet access from your private computing resources, you can use a hub VNet, that houses your firewall. The hub VNet can peer with the VNet that houses your Azure Machine Learning workspace. This allows the Azure Machine Learning workspace to communicate with the firewall. The firewall is configured to allow outbound internet access from the Azure Machine Learning workspace, preventing data exfiltration.
+3. Once the Data Scientists have concluded their experiments in the Compute instances, they could move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
-4. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
+4. They can deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. Databricks users can also use the same approach to deploy models to Managed Endpoint on Azure ML connecting these two environments. More details about this approach can be found on this [repo](https://github.com/Azure-Samples/aml-adb-managed-endpoints).
 
 5. All resources (Azure ML Workspace, Storage Account, Azure Key Vault, and Azure Container Registry) use private endpoints allocated in a customer VNet to ensure the private traffic.
 
-6. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
+6. To enable outbound internet access from your private computing resources, you can use a hub VNet, that houses your firewall. The hub VNet can peer with the VNet that houses your Azure Machine Learning workspace. This allows the Azure Machine Learning workspace to communicate with the firewall. The firewall is configured to allow outbound internet access from the Azure Machine Learning workspace, preventing data exfiltration.
 
-7. Once the Data Scientists have concluded their experiments in the Compute instances, they could move forward with implementing the pipelines using more robust computation (Compute Clusters).
+7. The inbound and outbound network traffic is configured according to the public internet access requirements. Some service tags are registered to allow proper traffic according to the [documentation](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-secure-workspace-vnet?tabs=required%2Cpe%2Ccli).
 
-8. They can also deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. Databricks users can also use the same approach deployment models to Managed Endpoint on Azure ML connecting these two environments. More details about this approach can be found on this [repo](https://github.com/Azure-Samples/aml-adb-managed-endpoints).
+8. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
 
 9. A secure Databricks environment can also be used along with the other services to provide more data processing capabilities using the Spark engine. You can also leverage this integration to monitor Azure Databricks runs, register models, and deploy them in Azure Machine Learning.
 
