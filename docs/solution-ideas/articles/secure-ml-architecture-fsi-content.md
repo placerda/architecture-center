@@ -19,7 +19,7 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 3. Once the Data Scientists have concluded their experiments in the Compute instances, they could move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
-4. Users can deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Online Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. 
+4. Users can deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. 
 
 5. All resources (Azure ML Workspace, Storage Account, Azure Key Vault, and Azure Container Registry) use private endpoints allocated in a customer VNet to ensure the private traffic.
 
