@@ -21,8 +21,8 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 3. Once the Data Scientists have concluded their experiments in the Compute instances, they could move forward with implementing the pipelines using more robust computation (Compute Clusters).
 
-<!-- TODO: ITEM 4 ADICONAL OPCIONAL EM QUE SE PODE USAR UM LLM PARA MELHORAR A SOLUCAO -->
-
+4. Optionally, in cases where the team is developing artificial intelligence solutions using large language models, data scientists and LLM application developers utilize the Prompt Flow feature in Azure Machine Learning for developing and evaluating prompts for OpenAI models deployed in Azure OpenAI.
+ 
 5. Users can deploy the models for Batch or Real-Time consumption through Inference endpoints deployed on Managed Endpoints. All these endpoints are secured by Private Endpoints connected with the other Azure ML resources. 
 
 6. All resources (Azure ML Workspace, Storage Account, Azure Key Vault, and Azure Container Registry) use private endpoints allocated in a customer VNet to ensure the private traffic.
@@ -70,7 +70,7 @@ This should be an explanation of the business problem and why this scenario was 
 > What were the benefits of implementing the solution?
 This solution built to solve secure ML network designes for banks and FSI. This architecture design can be used for following scenarios -->
 
-Instituições financeiras usualmente tem requisitos de segurança, compliance e governança que requerem arquiteturas que considerem todos estes aspectos. Nesta seção são apresentados os elementos que tipicamente são necessários nesse tipo de cenario.
+Financial institutions typically operate under stringent requirements related to security, compliance, and governance. These demands call for the creation of well-thought-out architectures that encompass all these elements. In this section, we will unpack the components that are often crucial in such environments, illuminating the complex requiremnts involved in this scenario.
 
 ### Security
 
@@ -82,15 +82,17 @@ Instituições financeiras usualmente tem requisitos de segurança, compliance e
 
 ### Inovation
 
+<!-- Luiz comentar da possiblidade de uso dos LLM no catálogo -->
+
 * [Large Language Models](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow). Financial institutions have been using Large Language Models (LLMs) to maximize the impact of their AI-based solutions. Azure ML Prompt Flow allows the workflow design to be integrated with LLM models (such as ChatGPT), enabling the feature enrichment in custom models developed in Azure Machine Learning.
 
 ### Scalability
 
 * [Autoscale on massive data processing](https://learn.microsoft.com/en-us/azure/databricks/delta-live-tables/auto-scaling). Azure Databricks enables companies to work efficiently in scenarios of massive use of analytical data. Its real-time data processing capabilities using features such as Delta Live Tables allow the development of optimized pipelines for different workloads.
 
-* [ML Model Training at scale](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-train-tensorflow). The Azure ML architecture allows the development of customized models using open-source frameworks (such as Tensorflow) trained with elastic and scalable computational resources according to business needs. With Azure ML, models can be developed for different use cases focused on the financial segment, such as fraud detection, churn prediction, among others.
+* [Machine Learning Model Training at Scale](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-train-tensorflow). The Azure ML architecture allows the development of customized models using open-source frameworks (such as Tensorflow) trained with elastic and scalable computational resources according to business needs. With Azure ML, models can be developed for different use cases focused on the financial segment, such as fraud detection, churn prediction, among others.
 
-* [Autoscale MOE](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-autoscale-endpoints). Real-time models can quickly be developed in Azure ML and deployed to Self-Managed Endpoints. Online Endpoints support auto-scaling features based on the current workloads. They are useful in scenarios with variable AI-based application workloads, helping to optimize costs and bring greater efficiency to the environment.
+* [Managed Machine Learning Inference at Scale](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-autoscale-endpoints). Real-time models can quickly be developed in Azure ML and deployed to Self-Managed Endpoints. Online Endpoints support auto-scaling features based on the current workloads. They are useful in scenarios with variable AI-based application workloads, helping to optimize costs and bring greater efficiency to the environment.
 
 ### Agility
 
@@ -100,7 +102,7 @@ Instituições financeiras usualmente tem requisitos de segurança, compliance e
 
 ### Responsible AI
 
-* [Responsible AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai). In the Financial Services Industry, it is imperative to implement AI in a responsible manner. As AI increasingly influences decision-making, it is crucial to ensure these decisions are made ethically and responsibly. The Azure Machine Learning [Responsible AI dashboard](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai-dashboard) provides a comprehensive framework for guaranteeing the responsible use of AI, enabling data scientists to develop configurations that meet stringent privacy laws and adhere to company policies.
+* In the Financial Services Industry, it is imperative to implement AI in a responsible manner. As AI increasingly influences decision-making, it is crucial to ensure these decisions are made ethically and responsibly. The Azure Machine Learning [Responsible AI dashboard](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai-dashboard) provides a comprehensive framework for guaranteeing the [responsible use of AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai), enabling data scientists to develop configurations that meet stringent privacy laws and adhere to company policies.
 
 ## Potential use cases
 
