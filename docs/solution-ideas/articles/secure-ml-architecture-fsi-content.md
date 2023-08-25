@@ -41,7 +41,7 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 * [Azure Databricks](https://learn.microsoft.com/azure/databricks/introduction/) is an Apache Spark-based analytics platform optimized for Azure, providing workspaces for data engineering and science tasks. You can attach Azure Databricks to your solution to enhance data transformation and preparation. You can also use [MLflow](https://www.mlflow.org/) for tracking experiments and registering Databricks models on AzureML model registry. A Databricks cluster with secure cluster connectivity enabled has no public IP addresses on its nodes.
 
-<!--TODO: AZURE OPENAI -->
+* [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview) is a service that offers access to advanced language models like GPT-4 and GPT-35-Turbo through REST API, Python SDK, or a web interface. The service supports various tasks, with Microsoft implementing safety measures against misuse. Azure OpenAI ensures a balance between advanced AI capabilities and Azure's security features, including private networking and regional availability.
 
 * [Azure Storage Account](https://learn.microsoft.com/azure/storage/common/storage-account-overview) is a secure, highly available, and massively scalable way to store data objects, including Data Lake Storage used to store your training datasets. It provides a unique namespace for your data accessible from anywhere in the world over HTTP or HTTPS. The data stored in the storage account is durable and protected, allowing you to access it with ease.
 
@@ -98,9 +98,9 @@ Instituições financeiras usualmente tem requisitos de segurança, compliance e
 
 * [MLOps](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
 
-### IA Responsável
+### Responsible AI
 
-* [Responsible AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [Responsible AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai). In the Financial Services Industry, it is imperative to implement AI in a responsible manner. As AI increasingly influences decision-making, it is crucial to ensure these decisions are made ethically and responsibly. The Azure Machine Learning [Responsible AI dashboard](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai-dashboard) provides a comprehensive framework for guaranteeing the responsible use of AI, enabling data scientists to develop configurations that meet stringent privacy laws and adhere to company policies.
 
 ## Potential use cases
 
