@@ -72,7 +72,7 @@ This solution built to solve secure ML network designes for banks and FSI. This 
 
 Instituições financeiras usualmente tem requisitos de segurança, compliance e governança que requerem arquiteturas que considerem todos estes aspectos. Nesta seção são apresentados os elementos que tipicamente são necessários nesse tipo de cenario.
 
-### Segurança
+### Security
 
 * [No public internet access](https://learn.microsoft.com/azure/private-link/private-endpoint-overview). You don't need to expose your Azure resources to the public internet by using Azure Private Endpoints from within your virtual network. This provides an additional layer of security for your resources. A private endpoint is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service powered by Azure Private Link.
 
@@ -80,23 +80,23 @@ Instituições financeiras usualmente tem requisitos de segurança, compliance e
 
 * [Data exfiltration prevention](https://learn.microsoft.com/azure/machine-learning/how-to-prevent-data-loss-exfiltration). Azure Machine Learning has several inbound and outbound network dependencies. By limiting inbound and outbound requirements, you can minimize data exfiltration risk by malicious agents within your organization.
 
-### Inovação
+### Inovation
 
-* [Large Language Models](prompt flow). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [Large Language Models](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow). Financial institutions have been using Large Language Models (LLMs) to maximize the impact of their AI-based solutions. Azure ML Prompt Flow allows the workflow design to be integrated with LLM models (such as ChatGPT), enabling the feature enrichment in custom models developed in Azure Machine Learning.
 
-### Escalabilidade
+### Scalability
 
-* [Autoscale on massive data processing](https://learn.microsoft.com/en-us/azure/databricks/delta-live-tables/auto-scaling). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [Autoscale on massive data processing](https://learn.microsoft.com/en-us/azure/databricks/delta-live-tables/auto-scaling). Azure Databricks enables companies to work efficiently in scenarios of massive use of analytical data. Its real-time data processing capabilities using features such as Delta Live Tables allow the development of optimized pipelines for different workloads.
 
-* [Escalabilidade no treinamento](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-train-tensorflow). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [ML Model Training at scale](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-train-tensorflow). The Azure ML architecture allows the development of customized models using open-source frameworks (such as Tensorflow) trained with elastic and scalable computational resources according to business needs. With Azure ML, models can be developed for different use cases focused on the financial segment, such as fraud detection, churn prediction, among others.
 
-* [Autoscale MOE](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-autoscale-endpoints). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [Autoscale MOE](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-autoscale-endpoints). Real-time models can quickly be developed in Azure ML and deployed to Self-Managed Endpoints. Online Endpoints support auto-scaling features based on the current workloads. They are useful in scenarios with variable AI-based application workloads, helping to optimize costs and bring greater efficiency to the environment.
 
-### Agilidade
+### Agility
 
-* [Data Governance](https://learn.microsoft.com/en-us/azure/databricks/data-governance/best-practices). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [Data Governance](https://learn.microsoft.com/en-us/azure/databricks/data-governance/best-practices). Companies in the financial segment must have well-defined strategies regarding data governance, ensuring control, consistency, and quality in the practices adopted for managing their data and AI environments. The services adopted in the proposed architecture address many challenges in formulating a data governance strategy connected with the compliance requirements demanded by the financial industry.
 
-* [MLOps](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment). bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla.
+* [MLOps](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment). Adopting Machine Learning Operations (MLOps) practices allows companies to gain quality and efficiency throughout the model development journey. The automation of CI/CD processes ensures faster model implementations, helping financial institutions reduce time-to-market.
 
 ### IA Responsável
 
