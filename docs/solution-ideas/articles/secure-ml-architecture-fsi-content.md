@@ -105,8 +105,8 @@ Instituições financeiras usualmente tem requisitos de segurança, compliance e
 ## Potential use cases
 
 This solution is aimed at financial services companies such as banks, insurers, and capital market companies that want to gain agility and efficiency by bringing their data science workloads to the cloud, but with particular attention to the solution's security.
- 
-In addition to companies in the FSI segment, other businesses interested in creating a secure data science environment in the cloud can also benefit from this solution. 
+
+In addition to companies in the FSI segment, other businesses interested in creating a secure data science environment in the cloud can also benefit from this solution.
 
 ## Contributors
 
