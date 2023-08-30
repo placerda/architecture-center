@@ -82,9 +82,8 @@ Financial institutions typically operate under stringent requirements related to
 
 ### Inovation
 
-<!-- Luiz comentar da possiblidade de uso dos LLM no catálogo -->
 
-* [Large Language Models](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow). Financial institutions have been using Large Language Models (LLMs) to maximize the impact of their AI-based solutions. Azure ML Prompt Flow allows the workflow design to be integrated with LLM models (such as ChatGPT), enabling the feature enrichment in custom models developed in Azure Machine Learning.
+* [Large Language Models](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow). Financial institutions have been utilizing Large Language Models (LLMs) to amplify the efficacy of their AI-based solutions. Data Scientists can take advantage of the Azure ML Prompt Flow feature to simplify the process of development, evaluation, and continuous integration and deployment of prompt engineering projects. LLMs can be integrated into a data science workflow in various ways, such as data cleaning and preprocessing, data augmentation and enrichment, and data visualization and presentation.
 
 ### Scalability
 
