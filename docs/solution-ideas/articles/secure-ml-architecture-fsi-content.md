@@ -33,7 +33,7 @@ This solution outlines a secure machine learning architecture aimed at Banks and
 
 9. The customer VNet for Azure ML can also communicate with other VNets through peering. For example, it is essential to securely connect to a Data Lake storage to use the data from different layers: bronze, silver, and gold, when developing ML models.
 
-10. A secure Databricks environment can also be used along with the other services to provide more data processing capabilities using the Spark engine. Users can also leverage this integration to monitor Azure Databricks runs, register models, and deploy them in Azure Machine Learning. More details about this approach can be found on this [repo](https://github.com/Azure-Samples/aml-adb-managed-endpoints).
+10. A secure Databricks environment can also be used along with the other services to provide more data processing capabilities using the Spark engine. Users can also leverage this integration to monitor Azure Databricks runs, register models, and deploy them in Azure Machine Learning. An example of this approach can be found in this [repo](https://github.com/Azure-Samples/aml-adb-managed-endpoints).
 
 ### Components
 
@@ -70,18 +70,17 @@ This should be an explanation of the business problem and why this scenario was 
 > What were the benefits of implementing the solution?
 This solution built to solve secure ML network designes for banks and FSI. This architecture design can be used for following scenarios -->
 
-Financial institutions typically operate under stringent requirements related to security, compliance, and governance. These demands call for the creation of well-thought-out architectures that encompass all these elements. In this section, we will unpack the components that are often crucial in such environments, illuminating the complex requiremnts involved in this scenario.
+Financial institutions typically operate under stringent requirements related to security, compliance, and governance. These demands call for the creation of well-thought-out architectures that encompass all these elements. In this section, we will unpack the components that are often crucial in such environments.
 
 ### Security
 
 * [No public internet access](https://learn.microsoft.com/azure/private-link/private-endpoint-overview). You don't need to expose your Azure resources to the public internet by using Azure Private Endpoints from within your virtual network. This provides an additional layer of security for your resources. A private endpoint is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service powered by Azure Private Link.
 
-* [Network security and isolation](https://learn.microsoft.com/azure/machine-learning/concept-enterprise-security#network-security-and-isolation). To restrict network access to Azure Machine Learning resources, you can use Azure Virtual Network (VNet). VNets allow you to create network environments that are partially or fully isolated from the public internet. This reduces the attack surface for your solution and the chances of data exfiltration.
+* [Network security and isolation](https://learn.microsoft.com/azure/machine-learning/concept-enterprise-security#network-security-and-isolation). To restrict network access to Azure Machine Learning resources, you can use Azure Virtual Network (VNet). VNets allow you to create network environments that are partially or fully isolated from the public internet. This reduces the attack surface for your solution and the chances of data exfiltration. With Azure Machine Learning, you can also isolate your network configuration using a [managed virtual network](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-managed-network) (managed VNet) that is created and managed by Azure Machine Learning at the workspace level. This feature simplifies and automates the process of setting up network isolation for your machine learning workloads.
 
 * [Data exfiltration prevention](https://learn.microsoft.com/azure/machine-learning/how-to-prevent-data-loss-exfiltration). Azure Machine Learning has several inbound and outbound network dependencies. By limiting inbound and outbound requirements, you can minimize data exfiltration risk by malicious agents within your organization.
 
 ### Inovation
-
 
 * [Large Language Models](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow). Financial institutions have been utilizing Large Language Models (LLMs) to amplify the efficacy of their AI-based solutions. Data Scientists can take advantage of the Azure ML Prompt Flow feature to simplify the process of development, evaluation, and continuous integration and deployment of prompt engineering projects. LLMs can be integrated into a data science workflow in various ways, such as data cleaning and preprocessing, data augmentation and enrichment, and data visualization and presentation.
 
